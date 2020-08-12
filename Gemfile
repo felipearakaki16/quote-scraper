@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 #### Gems added ####
 gem 'devise'
 gem 'friendly_id', '~> 5.2.4'
+gem 'simple_token_authentication', '~> 1.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
