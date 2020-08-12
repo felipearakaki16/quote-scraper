@@ -1,0 +1,13 @@
+  
+<h1>Welcome to Quote Scraper API</h1>
+<% if user_signed_in? %>
+  <p>These are the data you need to access the API:</p>
+  <p><b>URL:</b> 'quote-scraper.herokuapp.com/api/v1/quotes/tag' (where "tag" is the quote subject you are looking for)</p>
+  <p><b>E-mail: </b><%= current_user.email  %></p>
+  <p><b>Token: </b><%= current_user.authentication_token %></p>
+  <p><%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
+<% else %>
+ <p>Sign up to generate a token access</p>
+ <p><%= link_to "Sign up", new_user_registration_path %></p>
+ <p><%= link_to "Login", new_user_session_path %></p>
+<% end %>
