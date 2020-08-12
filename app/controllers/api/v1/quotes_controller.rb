@@ -15,7 +15,7 @@ class Api::V1::QuotesController < Api::V1::BaseController
       html_file = open(url).read
       html_doc = Nokogiri::HTML(html_file)
       
-      quote = quote.create(
+      quote = Quote.create(
         "tag": params[:id],
         "quote": html_doc.search('.quote .text')&.first&.text.gsub("“","").gsub("”",""),
         "author": html_doc.search('.quote .author')&.first&.text,

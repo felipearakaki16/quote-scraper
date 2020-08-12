@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'authentications#home'
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :frases, only: [ :show ]
+      resources :quotes, only: [ :show ]
     end
   end
 end
